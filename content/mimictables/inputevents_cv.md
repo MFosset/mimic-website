@@ -62,12 +62,9 @@ ORIGINALSITE | VARCHAR(30)
 
 Identifiers which specify the patient: `SUBJECT_ID` is unique to a patient, `HADM_ID` is unique to a patient hospital stay and `ICUSTAY_ID` is unique to a patient ICU stay.
 
-## `STARTTIME`, `ENDTIME`
+## `CHARTTIME`
 
-`STARTTIME` and `ENDTIME` record the start and end time of an input/output event.
-
-* `STARTTIME` is only available for inputs, and is unavailable for a large portion of the data (see the [understanding IOEVENTS page](/mimicdata/ioevents))
-* `ENDTIME` is the only time used for outputs
+Inputs are handled differently by CareVue and Metavision. For CareVue data, only the CHARTTIME is available, and the RATE and AMOUNT columns are asynchronous. See the [understanding IOEVENTS page](/mimicdata/ioevents).
 
 ## ITEMID
 
